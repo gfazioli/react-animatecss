@@ -1,5 +1,5 @@
 {
-  "name": "react-animatecss",
+  "name": "@gfazioli/react-animatecss",
   "version": "0.0.1",
   "private": false,
   "description": "The animatecss porting for React",
