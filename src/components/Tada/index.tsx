@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS } from "../AnimateCSS"
 
-interface Props extends IAnimateCSS { }
-
-const TadaStyled = styled(AnimateCSS) <Props>`
+const TadaStyled = styled(AnimateCSS)`
   @keyframes tada {
     from {
       transform: scale3d(1, 1, 1);
@@ -36,7 +34,7 @@ const TadaStyled = styled(AnimateCSS) <Props>`
   animation-name: ${p => p.animate ? "tada" : "none"};
 `;
 
-const Tada: FunctionComponent<Props> = props => {
+const Tada: FunctionComponent = props => {
 
   const { children, ...others } = props;
 

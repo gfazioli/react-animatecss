@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS, uc } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS, uc } from "../AnimateCSS"
 
 interface Props extends IAnimateCSS {
   /**

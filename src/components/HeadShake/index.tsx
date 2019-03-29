@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS } from "../AnimateCSS"
 
-interface Props extends IAnimateCSS { }
-
-const HeadShakeStyled = styled(AnimateCSS) <Props>`
+const HeadShakeStyled = styled(AnimateCSS)`
 @keyframes headShake {
   0% {
     transform: translateX(0);
@@ -35,7 +33,7 @@ const HeadShakeStyled = styled(AnimateCSS) <Props>`
   animation-timing-function: ease-in-out;
 `;
 
-const HeadShake: FunctionComponent<Props> = props => {
+const HeadShake: FunctionComponent = props => {
 
   const { children, ...others } = props;
 

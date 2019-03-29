@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS } from "../AnimateCSS"
 
-interface Props extends IAnimateCSS { }
-
-const SwingStyled = styled(AnimateCSS) <Props>`
+const SwingStyled = styled(AnimateCSS)`
 
   @keyframes swing {
     20% {
@@ -32,7 +30,7 @@ const SwingStyled = styled(AnimateCSS) <Props>`
   transform-origin: top center;
 `;
 
-const Swing: FunctionComponent<Props> = props => {
+const Swing: FunctionComponent = props => {
 
   const { children, ...others } = props;
 

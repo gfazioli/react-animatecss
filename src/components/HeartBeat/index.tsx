@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
-interface Props extends IAnimateCSS { }
-
-const HeartBeatStyled = styled(AnimateCSS) <Props>`
+const HeartBeatStyled = styled(AnimateCSS)`
 @keyframes heartBeat {
   0% {
     transform: scale(1);
@@ -31,7 +29,7 @@ const HeartBeatStyled = styled(AnimateCSS) <Props>`
   animation-timing-function: ease-in-out;
 `;
 
-const HeartBeat: FunctionComponent<Props> = props => {
+const HeartBeat: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, duration = "1.3s", ...others } = props;
 

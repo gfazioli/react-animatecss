@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS } from "../AnimateCSS"
 
-interface Props extends IAnimateCSS { }
-
-const HingeStyled = styled(AnimateCSS) <Props>`
+const HingeStyled = styled(AnimateCSS)`
 
   @keyframes hinge {
     0% {
@@ -38,7 +36,7 @@ const HingeStyled = styled(AnimateCSS) <Props>`
 
 `;
 
-const Hinge: FunctionComponent<Props> = props => {
+const Hinge: FunctionComponent = props => {
 
   const { children, ...others } = props;
 

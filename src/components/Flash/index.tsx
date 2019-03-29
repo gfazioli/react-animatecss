@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { IAnimateCSS, AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS } from "../AnimateCSS"
 
-interface Props extends IAnimateCSS { }
-
-const FlashStyled = styled(AnimateCSS) <Props>`
+const FlashStyled = styled(AnimateCSS)`
   @keyframes flash {
     from,
     50%,
@@ -22,7 +20,7 @@ const FlashStyled = styled(AnimateCSS) <Props>`
 
 `;
 
-const Flash: FunctionComponent<Props> = props => {
+const Flash: FunctionComponent = props => {
 
   const { children, ...others } = props;
 

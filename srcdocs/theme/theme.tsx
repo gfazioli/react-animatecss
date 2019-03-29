@@ -46,7 +46,7 @@ export const DocsExample = styled.div`
   }
 `;
 
-export function CodeSandbox(id?: string) {
+export function CodeSandbox(props: any) {
 
   const styles = {
     width: "100%",
@@ -54,10 +54,11 @@ export function CodeSandbox(id?: string) {
     border: "0",
     borderRadius: "4px",
     overflow: "hidden"
-
   }
 
+  const url = `https://codesandbox.io/embed/${props.id}?fontsize=14`
+
   return (
-    <iframe src="https://codesandbox.io/embed/01nxypo6zl?fontsize=14" style={styles} sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+    <iframe src={url} style={styles} sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
   );
 }
