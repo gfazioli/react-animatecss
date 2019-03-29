@@ -1,4 +1,10 @@
 export { default as Bounce } from "./components/Bounce";
 export { default as HeadShake } from "./components/HeadShake";
 export { default as Flash } from "./components/Flash";
+export { default as Jello } from "./components/Jello";
+export { default as Pulse } from "./components/Pulse";
+export { default as RubberBand } from "./components/RubberBand";
+export { default as Shake } from "./components/Shake";
+export { default as Swing } from "./components/Swing";
+export { default as Tada } from "./components/Tada";
 export { default as Zoom } from "./components/Zoom";
