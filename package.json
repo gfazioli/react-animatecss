@@ -1,6 +1,6 @@
 {
   "name": "@gfazioli/react-animatecss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "The animatecss porting for React",
   "main": "dist/index.js",
