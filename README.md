@@ -7,7 +7,7 @@
 ![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-toggle.svg)
 ![npm](https://img.shields.io/npm/dm/react-animatecss.svg)
 
-This library is the porting of AnimateCSS as React components
+Porting of [Animate CSS]]https://github.com/daneden/animate.css) as React components
 
 ## Installation
 
@@ -46,6 +46,10 @@ function Application() {
 ## Documentation
 
 See the complete [documentation and intercative playground](https://gfazioli.github.io/react-animatecss/)
+
+## Credits
+
+This package is based of [Animate.css](https://github.com/daneden/animate.css).
 
 
 ## Contributing
