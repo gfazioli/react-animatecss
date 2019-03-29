@@ -1,11 +1,11 @@
 # Overview
 
-![version](https://img.shields.io/npm/v/react-animatecss.svg)
-![license](https://img.shields.io/npm/l/react-animatecss.svg)
+![version](https://img.shields.io/npm/v/@gfazioli/react-animatecss.svg)
+![license](https://img.shields.io/npm/l/@gfazioli/react-animatecss.svg)
 ![issues](https://img.shields.io/github/issues/gfazioli/react-toggle.svg)
-![type](https://img.shields.io/npm/types/react-animatecss.svg)
-![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-toggle.svg)
-![npm](https://img.shields.io/npm/dm/react-animatecss.svg)
+![type](https://img.shields.io/npm/types/@gfazioli/react-animatecss.svg)
+![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-animatecss.svg)
+![npm](https://img.shields.io/npm/dm/@gfazioli/react-animatecss.svg)
 
 Porting of [Animate CSS]]https://github.com/daneden/animate.css) as React components
 
@@ -14,13 +14,13 @@ Porting of [Animate CSS]]https://github.com/daneden/animate.css) as React compon
 You can use either **npm**
 
 ```bash
-npm i react-animatecss
+npm i @gfazioli/react-animatecss
 ```
 
 or **yarn**
 
 ```bash
-yarn add react-animatecss
+yarn add @gfazioli/react-animatecss
 ```
 
 ## Basic Usage
