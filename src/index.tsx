@@ -7,4 +7,5 @@ export { default as RubberBand } from "./components/RubberBand";
 export { default as Shake } from "./components/Shake";
 export { default as Swing } from "./components/Swing";
 export { default as Tada } from "./components/Tada";
+export { default as Wobble } from "./components/Wobble";
 export { default as Zoom } from "./components/Zoom";
