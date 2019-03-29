@@ -7,7 +7,7 @@
 ![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-animatecss.svg)
 ![npm](https://img.shields.io/npm/dm/@gfazioli/react-animatecss.svg)
 
-Porting of [Animate CSS]]https://github.com/daneden/animate.css) as React components
+Porting of [Animate CSS]https://github.com/daneden/animate.css) as React components
 
 ## Installation
 
