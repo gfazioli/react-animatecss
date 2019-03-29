@@ -1,0 +1,28 @@
+---
+name: Rotate
+route: /components/rotate
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Rotate from '../../../src/components/Rotate'
+
+# Rotate
+
+## Props
+
+<PropsTable of={Rotate} />
+
+## Playground
+
+<Playground>
+  <Rotate animate={true}>
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Rotate>  
+</Playground>
+
+<Playground>
+  <Rotate animate={true} mode="in" direction="down" from="left">
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Rotate>  
+</Playground>

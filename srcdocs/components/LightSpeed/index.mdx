@@ -1,0 +1,28 @@
+---
+name: LightSpeed
+route: /components/lightSpeed
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import LightSpeed from '../../../src/components/LightSpeed'
+
+# LightSpeed
+
+## Props
+
+<PropsTable of={LightSpeed} />
+
+## Playground
+
+<Playground>
+  <LightSpeed animate={true}>
+    <h1>Say Hello to React AnimateCSS</h1>
+  </LightSpeed>  
+</Playground>
+
+<Playground>
+  <LightSpeed animate={true} mode="out">
+    <h1>Say Hello to React AnimateCSS</h1>
+  </LightSpeed>  
+</Playground>

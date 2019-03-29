@@ -1,0 +1,34 @@
+---
+name: Fade
+route: /components/fade
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Fade from '../../../src/components/Fade'
+
+# Fade
+
+## Props
+
+<PropsTable of={Fade} />
+
+## Playground
+
+<Playground>
+  <Fade animate={true}>
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Fade>  
+</Playground>
+
+<Playground>
+  <Fade animate={true} direction="down" mode="in">
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Fade>  
+</Playground>
+
+<Playground>
+  <Fade animate={true} direction="down" mode="in" big>
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Fade>  
+</Playground>

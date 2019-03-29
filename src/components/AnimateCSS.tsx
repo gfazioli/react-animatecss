@@ -41,7 +41,7 @@ export const AnimateCSS = styled.span<IAnimateCSS>`
 `;
 
 export function uc(v?: string): string {
-  if (!!v && v.length > 1) {
+  if (!!v && typeof v === "string") {
     return v.charAt(0).toUpperCase() + v.slice(1);
   }
   return "";

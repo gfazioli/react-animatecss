@@ -1,0 +1,28 @@
+---
+name: Slide
+route: /components/slide
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Slide from '../../../src/components/Slide'
+
+# Slide
+
+## Props
+
+<PropsTable of={Slide} />
+
+## Playground
+
+<Playground>
+  <Slide animate={true}>
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Slide>  
+</Playground>
+
+<Playground>
+  <Slide animate={true} mode="out" direction="right">
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Slide>  
+</Playground>

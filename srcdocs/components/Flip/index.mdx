@@ -1,0 +1,28 @@
+---
+name: Flip
+route: /components/flip
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Flip from '../../../src/components/Flip'
+
+# Flip
+
+## Props
+
+<PropsTable of={Flip} />
+
+## Playground
+
+<Playground>
+  <Flip animate={true}>
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Flip>  
+</Playground>
+
+<Playground>
+  <Flip animate={true} axes="x" mode="in">
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Flip>  
+</Playground>
