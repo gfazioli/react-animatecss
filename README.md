@@ -30,7 +30,7 @@ First of all, remember to import the component.
 ```jsx
 import React from "react"
 
-import {Zoom} from "react-animatecss"
+import {Zoom} from "@gfazioli/react-animatecss"
 
 function Application() {
 
