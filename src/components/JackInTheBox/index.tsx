@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
 const JackInTheBoxStyled = styled(AnimateCSS)`
 
@@ -29,7 +29,7 @@ const JackInTheBoxStyled = styled(AnimateCSS)`
 
 `;
 
-const JackInTheBox: FunctionComponent = props => {
+const JackInTheBox: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, ...others } = props;
 

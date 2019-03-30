@@ -11,7 +11,7 @@ interface Props extends IAnimateCSS {
   mode?: string;
 }
 
-const JackInTheBoxStyled = styled(AnimateCSS) <Props>`
+const RollStyled = styled(AnimateCSS) <Props>`
   @keyframes rollIn {
     from {
       opacity: 0;
@@ -38,15 +38,15 @@ const JackInTheBoxStyled = styled(AnimateCSS) <Props>`
 
 `;
 
-const JackInTheBox: FunctionComponent<Props> = props => {
+const Roll: FunctionComponent<Props> = props => {
 
   const { children, mode = "in", ...others } = props;
 
   return (
-    <JackInTheBoxStyled mode={mode} {...others}>
+    <RollStyled mode={mode} {...others}>
       {children}
-    </JackInTheBoxStyled>
+    </RollStyled>
   );
 }
 
-export default JackInTheBox;
+export default Roll;

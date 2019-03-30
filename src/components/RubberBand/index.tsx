@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
 const RubberBandStyled = styled(AnimateCSS)`
 
@@ -38,7 +38,7 @@ const RubberBandStyled = styled(AnimateCSS)`
   animation-name: ${p => p.animate ? "rubberBand" : "none"};
 `;
 
-const RubberBand: FunctionComponent = props => {
+const RubberBand: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, ...others } = props;
 

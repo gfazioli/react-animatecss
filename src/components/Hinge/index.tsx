@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
 const HingeStyled = styled(AnimateCSS)`
 
@@ -36,7 +36,7 @@ const HingeStyled = styled(AnimateCSS)`
 
 `;
 
-const Hinge: FunctionComponent = props => {
+const Hinge: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, ...others } = props;
 

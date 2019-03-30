@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
 const ShakeStyled = styled(AnimateCSS)`
 
@@ -30,7 +30,7 @@ const ShakeStyled = styled(AnimateCSS)`
   animation-name: ${p => p.animate ? "shake" : "none"};
 `;
 
-const Shake: FunctionComponent = props => {
+const Shake: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, ...others } = props;
 

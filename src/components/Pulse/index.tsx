@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
 const PulseStyled = styled(AnimateCSS)`
   @keyframes pulse {
@@ -20,7 +20,7 @@ const PulseStyled = styled(AnimateCSS)`
   animation-name: ${p => p.animate ? "pulse" : "none"};
 `;
 
-const Pulse: FunctionComponent = props => {
+const Pulse: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, ...others } = props;
 

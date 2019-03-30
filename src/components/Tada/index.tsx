@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
 
 const TadaStyled = styled(AnimateCSS)`
   @keyframes tada {
@@ -34,7 +34,7 @@ const TadaStyled = styled(AnimateCSS)`
   animation-name: ${p => p.animate ? "tada" : "none"};
 `;
 
-const Tada: FunctionComponent = props => {
+const Tada: FunctionComponent<IAnimateCSS> = props => {
 
   const { children, ...others } = props;
 

@@ -10,6 +10,7 @@ export { default as JackInTheBox } from "./components/JackInTheBox";
 export { default as Pulse } from "./components/Pulse";
 export { default as RubberBand } from "./components/RubberBand";
 export { default as Rotate } from "./components/Rotate";
+export { default as Roll } from "./components/Roll";
 export { default as Shake } from "./components/Shake";
 export { default as Swing } from "./components/Swing";
 export { default as Slide } from "./components/Slide";
