@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/npm/v/@gfazioli/react-animatecss.svg)
 ![license](https://img.shields.io/npm/l/@gfazioli/react-animatecss.svg)
-![issues](https://img.shields.io/github/issues/gfazioli/react-animatecss.svg)
+![GitHub issues](https://img.shields.io/github/issues/gfazioli/react-animatecss.svg)
 ![type](https://img.shields.io/npm/types/@gfazioli/react-animatecss.svg)
 ![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-animatecss.svg)
 ![npm](https://img.shields.io/npm/dm/@gfazioli/react-animatecss.svg)
