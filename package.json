@@ -1,6 +1,6 @@
 {
   "name": "@gfazioli/react-animatecss",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "description": "The Animate CSS porting for React",
   "main": "dist/index.js",
@@ -57,7 +57,7 @@
     "dev": "docz dev",
     "precommit": "tsc --project tsconfig.json && ./node_modules/tslint/bin/tslint './src/**/*.ts{,x}'",
     "docz:dev": "docz dev",
-    "docz:build": "docz build",
-    "build": "yarn postinstall && docz build"
+    "docz:build": "docz build --base /react-animatecss",
+    "build": "yarn postinstall && yarn docz:build"
   }
 }
