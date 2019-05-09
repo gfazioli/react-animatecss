@@ -8,6 +8,7 @@ export default {
       primary: "tomato",
     },
   },
+  codeSandbox: false,
   title: "React AnimateCSS",
   typescript: true
 }
