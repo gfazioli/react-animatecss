@@ -4,16 +4,10 @@ route: /components/bounce
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Bounce from '../../../src/components/Bounce'
 
-# Bounce
-
-## Props
-
-<PropsTable of={Bounce} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <Bounce animate={true}>
@@ -26,3 +20,7 @@ import Bounce from '../../../src/components/Bounce'
     <h1>Say Hello to React AnimateCSS</h1>
   </Bounce>  
 </Playground>
+
+## Properties
+
+<Props of={Bounce} />

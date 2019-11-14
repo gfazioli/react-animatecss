@@ -1,14 +1,8 @@
-// doczrc.js
-
 export default {
-  description: "React AnimateCSS documentation and playground",
-  dest: "./docs",
-  themeConfig: {
-    colors: {
-      primary: "tomato",
-    },
-  },
-  codeSandbox: false,
+  typescript: true,
   title: "React AnimateCSS",
-  typescript: true
+  description: "React AnimateCSS documentation and playground",
+  base: "/react-animatecss",
+  ignore: ["README.md", 'readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md'],
+  dest: '/docs',
 }

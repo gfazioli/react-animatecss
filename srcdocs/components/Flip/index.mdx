@@ -4,16 +4,10 @@ route: /components/flip
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Flip from '../../../src/components/Flip'
 
-# Flip
-
-## Props
-
-<PropsTable of={Flip} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <Flip animate={true}>
@@ -26,3 +20,7 @@ import Flip from '../../../src/components/Flip'
     <h1>Say Hello to React AnimateCSS</h1>
   </Flip>  
 </Playground>
+
+## Properties
+
+<Props of={Flip} />

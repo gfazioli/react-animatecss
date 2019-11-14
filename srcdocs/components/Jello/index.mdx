@@ -4,19 +4,17 @@ route: /components/jello
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Jello from '../../../src/components/Jello'
 
-# Jello
-
-## Props
-
-<PropsTable of={Jello} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <Jello animate={true}>
     <h1>Say Hello to React AnimateCSS</h1>
   </Jello>  
 </Playground>
+
+## Properties
+
+<Props of={Jello} />

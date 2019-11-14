@@ -4,16 +4,10 @@ route: /components/roll
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Roll from '../../../src/components/Roll'
 
-# Roll
-
-## Props
-
-<PropsTable of={Roll} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <Roll animate={true}>
@@ -26,3 +20,7 @@ import Roll from '../../../src/components/Roll'
     <h1>Say Hello to React AnimateCSS</h1>
   </Roll>  
 </Playground>
+
+## Properties
+
+<Props of={Roll} />

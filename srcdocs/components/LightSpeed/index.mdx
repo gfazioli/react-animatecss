@@ -4,16 +4,10 @@ route: /components/lightSpeed
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import LightSpeed from '../../../src/components/LightSpeed'
 
-# LightSpeed
-
-## Props
-
-<PropsTable of={LightSpeed} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <LightSpeed animate={true}>
@@ -26,3 +20,7 @@ import LightSpeed from '../../../src/components/LightSpeed'
     <h1>Say Hello to React AnimateCSS</h1>
   </LightSpeed>  
 </Playground>
+
+## Properties
+
+<Props of={LightSpeed} />

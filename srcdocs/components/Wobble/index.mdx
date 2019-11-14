@@ -4,19 +4,17 @@ route: /components/wobble
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Wobble from '../../../src/components/Wobble'
 
-# Wobble
-
-## Props
-
-<PropsTable of={Wobble} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <Wobble animate={true}>
     <h1>Say Hello to React AnimateCSS</h1>
   </Wobble>  
 </Playground>
+
+## Properties
+
+<Props of={Wobble} />

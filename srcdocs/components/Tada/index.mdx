@@ -4,19 +4,17 @@ route: /components/tada
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Tada from '../../../src/components/Tada'
 
-# Tada
-
-## Props
-
-<PropsTable of={Tada} />
-
-## Playground
+## Basic usage
 
 <Playground>
   <Tada animate={true}>
     <h1>Say Hello to React AnimateCSS</h1>
   </Tada>  
 </Playground>
+
+## Properties
+
+<Props of={Tada} />
