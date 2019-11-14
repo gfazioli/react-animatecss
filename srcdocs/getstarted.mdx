@@ -26,9 +26,17 @@ or **yarn**
 yarn add @gfazioli/react-animatecss
 ```
 
-## Credits
+## Combine
 
-This package is based of [Animate.css](https://github.com/daneden/animate.css)
+Of course, you can [combine different animation effects](https://codesandbox.io/s/rmyqwq2wmo) as well
+
+```
+<Zoom animate={both} onAnimationEnd={() => setBoth(false)}>
+  <RubberBand animate={both} onAnimationEnd={() => setBoth(false)}>
+    <h1>RubberBand + Zoom</h1>
+  </RubberBand>
+</Zoom>
+```
 
 ## onAnimationEnd
 
@@ -37,3 +45,7 @@ You may use the `onAnimationEnd` event to detect when an animation is completed.
 ## Mix your animation
 
 <CodeSandbox id="rmyqwq2wmo" />
+
+## Credits
+
+This package is based of [Animate.css](https://github.com/daneden/animate.css)
