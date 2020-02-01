@@ -1,6 +1,6 @@
 {
   "name": "@gfazioli/react-animatecss",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "The Animate CSS porting for React",
   "main": "dist/index.js",

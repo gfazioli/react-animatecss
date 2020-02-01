@@ -46,6 +46,17 @@ You may use the `onAnimationEnd` event to detect when an animation is completed.
 
 <CodeSandbox id="rmyqwq2wmo" />
 
+## Agnostic HTML tag
+
+Currently, the default container for all animations is a `span` with `display: inline-block`. You may easly override this behaviour by using the `as` property.
+
+```
+<Bounce as="div" animate={true} direction="right" mode="in">
+  <h1>Say Hello to React AnimateCSS</h1>
+</Bounce>  
+```
+
+
 ## Credits
 
 This package is based of [Animate.css](https://github.com/daneden/animate.css)
