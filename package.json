@@ -1,6 +1,6 @@
 {
   "name": "@gfazioli/react-animatecss",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "The Animate CSS porting for React",
   "main": "dist/index.js",
@@ -24,39 +24,41 @@
   "author": "Giovambattista Fazioli",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "@types/node": "12.12.7",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "@types/styled-components": "^4.1.19",
-    "@types/webpack": "4.39.8",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.5",
+    "@types/styled-components": "^4.4.2",
+    "@types/webpack": "4.41.0",
     "babel-loader": "^8.0.4",
+    "docz": "^2.2.0",
+    "gatsby": "^2.18.16",
+    "gatsby-plugin-polyfill-io": "^1.1.0",
+    "gatsby-theme-docz": "^2.2.0",
     "prettier": "1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "scheduler": "^0.17.0",
+    "styled-components": "^5.0.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.0.3",
     "tslint": "^6.0.0-beta0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "3.7.2",
+    "typescript": "3.7.5",
     "typescript-styled-plugin": "^0.15.0",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.3.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "docz": "^v2.0.0-rc.71",
-    "@emotion/core": "^10.0.14",
-    "@emotion/styled": "^10.0.14",
-    "gatsby": "^2.17.8",
-    "gatsby-theme-docz": "^2.0.0-rc.71",
-    "scheduler": "^0.17.0",
-    "styled-components": "*"
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.0"
   },
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styled-components": "*"
+    "styled-components": "^5.0.0"
   },
   "dependencies": {
-    "react-use": "^13.2.1"
+    "react-use": "^13.22.4"
   },
   "scripts": {
     "dev": "docz dev",
