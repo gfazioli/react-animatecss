@@ -1,18 +1,17 @@
-import { FunctionComponent } from "react";
-import { IAnimateCSS } from "../AnimateCSS";
+import { Direction, IAnimateCSS, Mode } from "../AnimateCSS";
 interface Props extends IAnimateCSS {
     /**
      * Animate mode "in"|"out"
      *
      * @default "in"
      */
-    mode?: string;
+    mode?: Mode;
     /**
      * Animation direction "up"|"left"|"down"|"right"
      *
      * @default none
      */
-    direction?: string;
+    direction?: Direction;
     /**
      * Increase animation when direction is set
      *
@@ -20,5 +19,5 @@ interface Props extends IAnimateCSS {
      */
     big?: boolean;
 }
-declare const Fade: FunctionComponent<Props>;
-export default Fade;
+declare const _default: import("styled-components").StyledComponent<"span", any, IAnimateCSS & Props, never>;
+export default _default;

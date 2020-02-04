@@ -1,4 +1,2 @@
-import { FunctionComponent } from "react";
-import { IAnimateCSS } from "../AnimateCSS";
-declare const Flash: FunctionComponent<IAnimateCSS>;
-export default Flash;
+declare const _default: import("styled-components").StyledComponent<"span", any, import("../AnimateCSS").IAnimateCSS, never>;
+export default _default;

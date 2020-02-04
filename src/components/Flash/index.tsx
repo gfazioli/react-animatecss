@@ -1,8 +1,7 @@
-import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS";
+import { AnimateCSS, animateName } from "../AnimateCSS";
 
-const FlashStyled = styled(AnimateCSS)`
+export default styled(AnimateCSS)`
   @keyframes flash {
     from,
     50%,
@@ -16,13 +15,5 @@ const FlashStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => (p.animate ? "flash" : "none")};
+  animation-name: ${p => animateName("flash", p)};
 `;
-
-const Flash: FunctionComponent<IAnimateCSS> = props => {
-  const { children, ...others } = props;
-
-  return <FlashStyled {...others}>{children}</FlashStyled>;
-};
-
-export default Flash;

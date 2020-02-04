@@ -1,0 +1,204 @@
+/**
+ * Overwrite fonts
+ *
+ */
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-Regular.woff2') format('woff2'),
+    url('./fonts/Intelo-Regular.woff') format('woff');
+  src: url('./fonts/Intelo-Regular.eot');
+  src: url('./fonts/Intelo-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-Italic.woff2') format('woff2'),
+    url('./fonts/Intelo-Italic.woff') format('woff');
+  src: url('./fonts/Intelo-Italic.eot');
+  src: url('./fonts/Intelo-Italic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-Bold.woff2') format('woff2'),
+    url('./fonts/Intelo-Bold.woff') format('woff');
+  src: url('./fonts/Intelo-Bold.eot');
+  src: url('./fonts/Intelo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-BoldItalic.woff2') format('woff2'),
+    url('./fonts/Intelo-BoldItalic.woff') format('woff');
+  src: url('./fonts/Intelo-BoldItalic.eot');
+  src: url('./fonts/Intelo-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-Semibold.woff2') format('woff2'),
+    url('./fonts/Intelo-Semibold.woff') format('woff');
+  src: url('./fonts/Intelo-Semibold.eot');
+  src: url('./fonts/Intelo-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-SemiboldItalic.woff2') format('woff2'),
+    url('./fonts/Intelo-SemiboldItalic.woff') format('woff');
+  src: url('./fonts/Intelo-SemiboldItalic.eot');
+  src: url('./fonts/Intelo-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-Light.woff2') format('woff2'),
+    url('./fonts/Intelo-Light.woff') format('woff');
+  src: url('./fonts/Intelo-Light.eot');
+  src: url('./fonts/Intelo-Light.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Intelo";
+  src: url('./fonts/Intelo-LightItalic.woff2') format('woff2'),
+    url('./fonts/Intelo-LightItalic.woff') format('woff');
+  src: url('./fonts/Intelo-LightItalic.eot');
+  src: url('./fonts/Intelo-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "InteloExtraBold";
+  src: url('./fonts/Intelo_Extra-Bold.woff2') format('woff2'),
+    url('./fonts/Intelo_Extra-Bold.woff') format('woff');
+  src: url('./fonts/Intelo_Extra-Bold.eot');
+  src: url('./fonts/Intelo_Extra-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo_Extra-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "InteloAltExtraBold";
+  src: url('./fonts/Intelo-Alt-ExtraBold.woff2') format('woff2'),
+    url('./fonts/Intelo-Alt-ExtraBold.woff') format('woff');
+  src: url('./fonts/Intelo-Alt-ExtraBold.eot');
+  src: url('./fonts/Intelo-Alt-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Intelo-Alt-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+
+html body h1 {
+  font-family: "Intelo" !important;
+}
+
+html body h2 {
+  font-family: "Intelo" !important;
+}
+
+html body h3 {
+  font-family: "Intelo" !important;
+}
+
+html body h4 {
+  font-family: "Intelo" !important;
+}
+
+html body h5 {
+  font-family: "Intelo" !important;
+}
+
+html body h6 {
+  font-family: "Intelo" !important;
+}
+
+html body p {
+  font-family: "Intelo" !important;
+}
+
+html body [class*='css-ueqitl'],
+html body [data-testid='prop-description'] p code {
+  background-color: #eef5f5;
+  border-radius: 3px;
+  padding: 1px 6px;
+  border: 1px solid #e0e8e8;
+}
+
+html body [class^='cd-'],
+html body [class*='cd-'] {
+  font-family: "Intelo" !important;
+}
+
+html body [data-testid='props'] {
+  font-family: "Fira Mono", "Fira Code", Monaco, 'Courier New', Courier, monospace;
+  font-size: 13px;
+}
+
+html body [data-testid='prop-description'] * {
+  font-family: "Fira Mono", "Fira Code", Monaco, 'Courier New', Courier, monospace !important;
+  font-size: 13px;
+}
+
+html body [data-testid='live-preview'] {
+  margin: 0px;
+  padding: 20px;
+}
+
+html body [data-testid='live-editor'] {
+  font-family: "Fira Mono", "Fira Code", Monaco, 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+html body [data-testid='layout'] main {
+  height: 100%;
+  min-height: 100vh;
+}
+
+html body [data-testid='playground'] {
+  margin-bottom: 24px !important;
+}
+
+html body [data-testid='main-container'] blockquote {
+  position: relative;
+  border-radius: 4px;
+  background-color: #fff;
+  border-left: .2rem solid #448aff;
+  padding-left: 16px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px #333;
+  font-style: normal;
+}
+
+html body [data-testid='nav-search'] {
+  display: inline-flex;
+}

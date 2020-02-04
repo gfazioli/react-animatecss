@@ -1,3 +1,6 @@
+export declare type Direction = "" | "up" | "left" | "down" | "right";
+export declare type Mode = "" | "in" | "out";
+export declare type Axes = "" | "x" | "y";
 export interface IAnimateCSS {
     /**
      * Set true to start the animation. If you want start the animation again, you have to set this props to false before, by using `onAnimationEnd` event
@@ -23,10 +26,23 @@ export interface IAnimateCSS {
      * @default none
      */
     delay?: string;
+}
+export interface IAnimateCSSModeDirection extends IAnimateCSS {
     /**
-     * Type of HTML element
+     * Animate mode "" | "in"|"out"
+     *
+     * @default "in"
      */
-    as?: any;
+    mode?: Mode;
+    /**
+     * Animation direction ""| "up"|"left"|"down"|"right"
+     *
+     * @default none
+     */
+    direction?: Direction;
 }
 export declare const AnimateCSS: import("styled-components").StyledComponent<"span", any, IAnimateCSS, never>;
+export declare const AnimateCSSModeDirection: import("styled-components").StyledComponent<"span", any, IAnimateCSSModeDirection, never>;
 export declare const uc: (v?: string | undefined) => string;
+export declare const uppercase: (value?: string) => string;
+export declare const animateName: (type: string, p: any) => string;
