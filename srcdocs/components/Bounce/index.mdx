@@ -6,6 +6,7 @@ menu: Components
 
 import { Playground, Props } from 'docz'
 import Bounce from '../../../src/components/Bounce'
+import Example from "./example"
 
 ## Basic usage
 
@@ -28,6 +29,18 @@ import Bounce from '../../../src/components/Bounce'
     <h1>Say Hello to React AnimateCSS</h1>
   </Bounce>  
 </Playground>
+
+## Example 
+
+<Example />
+
+```jsx
+export default () => (
+  <Bounce as="div" animate={true} direction="right" mode="in">
+    <h1>Say Hello to React AnimateCSS</h1>
+  </Bounce>
+);
+```
 
 ## Properties
 

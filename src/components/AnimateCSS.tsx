@@ -25,6 +25,10 @@ export interface IAnimateCSS {
    * @default none
    */
   delay?: string;
+  /**
+   * Type of HTML element
+   */
+  as?: any;
 }
 
 export const AnimateCSS = styled.span<IAnimateCSS>`
@@ -40,9 +44,4 @@ export const AnimateCSS = styled.span<IAnimateCSS>`
   }
 `;
 
-export function uc(v?: string): string {
-  if (!!v && typeof v === "string") {
-    return v.charAt(0).toUpperCase() + v.slice(1);
-  }
-  return "";
-}
+export const uc = (v?: string): string => (!!v && typeof v === "string" ? v.charAt(0).toUpperCase() + v.slice(1) : "");

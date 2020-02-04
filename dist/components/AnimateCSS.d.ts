@@ -23,6 +23,10 @@ export interface IAnimateCSS {
      * @default none
      */
     delay?: string;
+    /**
+     * Type of HTML element
+     */
+    as?: any;
 }
 export declare const AnimateCSS: import("styled-components").StyledComponent<"span", any, IAnimateCSS, never>;
-export declare function uc(v?: string): string;
+export declare const uc: (v?: string | undefined) => string;
