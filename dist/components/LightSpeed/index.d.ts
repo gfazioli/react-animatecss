@@ -1,12 +1,12 @@
-import { FunctionComponent } from "react";
-import { IAnimateCSS } from "../AnimateCSS";
-interface Props extends IAnimateCSS {
+/// <reference types="react" />
+import { IAnimateCSS, Mode } from "../AnimateCSS";
+export interface LightSpeedProps extends IAnimateCSS {
     /**
      * Animate mode "in"|"out"
      *
      * @default "in"
      */
-    mode?: string;
+    mode?: Mode;
 }
-declare const LightSpeed: FunctionComponent<Props>;
+declare const LightSpeed: (props: LightSpeedProps) => JSX.Element;
 export default LightSpeed;

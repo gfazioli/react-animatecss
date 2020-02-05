@@ -1,2 +1,17 @@
-declare const _default: import("styled-components").StyledComponent<"span", any, import("../AnimateCSS").IAnimateCSSModeDirection, never>;
-export default _default;
+/// <reference types="react" />
+import { Direction, IAnimateCSS, Mode } from "../AnimateCSS";
+export interface BounceProps extends IAnimateCSS {
+    /**
+     * Animate mode "" | "in"|"out"
+     *
+     */
+    mode?: Mode;
+    /**
+     * Animation direction ""| "up"|"left"|"down"|"right"
+     *
+     * @default none
+     */
+    direction?: Direction;
+}
+declare const Bounce: (props: BounceProps) => JSX.Element;
+export default Bounce;

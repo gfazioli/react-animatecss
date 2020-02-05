@@ -10,9 +10,73 @@ import Tada from '../../../src/components/Tada'
 ## Basic usage
 
 <Playground>
-  <Tada animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Tada>  
+  <h1>Say Hello to React
+    <Tada animate={true}>
+      AnimateCSS
+    </Tada>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Tada animate={true} block>
+      AnimateCSS
+    </Tada>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Tada animate={true} delay="5s">
+      AnimateCSS
+    </Tada>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Tada animate={true} duration="5s">
+      AnimateCSS
+    </Tada>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Tada animate={true} repeat="3">
+      AnimateCSS
+    </Tada>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Tada animate={true} repeat="infinite">
+      AnimateCSS
+    </Tada>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Tada animate={true} as="em">
+      AnimateCSS
+    </Tada>  
+  </h1>
 </Playground>
 
 ## Properties

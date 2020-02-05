@@ -10,9 +10,73 @@ import Shake from '../../../src/components/Shake'
 ## Basic usage
 
 <Playground>
-  <Shake animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Shake>  
+  <h1>Say Hello to React
+    <Shake animate={true}>
+      AnimateCSS
+    </Shake>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Shake animate={true} block>
+      AnimateCSS
+    </Shake>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Shake animate={true} delay="5s">
+      AnimateCSS
+    </Shake>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Shake animate={true} duration="5s">
+      AnimateCSS
+    </Shake>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Shake animate={true} repeat="3">
+      AnimateCSS
+    </Shake>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Shake animate={true} repeat="infinite">
+      AnimateCSS
+    </Shake>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Shake animate={true} as="em">
+      AnimateCSS
+    </Shake>  
+  </h1>
 </Playground>
 
 ## Properties

@@ -10,15 +10,107 @@ import Rotate from '../../../src/components/Rotate'
 ## Basic usage
 
 <Playground>
-  <Rotate animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Rotate>  
+  <h1>Say Hello to React
+    <Rotate animate={true}>
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} block>
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} delay="5s">
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Direction
+
+You should use `direction` alogn with `from`. Default value for `from` is `left`
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} direction="up">
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## From
+
+You should use `from` alogn with `direction`. Default value for `direction` is `up`
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} from="right">
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} duration="5s">
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Mode
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} mode="out">
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} repeat="3">
+      AnimateCSS
+    </Rotate>  
+  </h1>
 </Playground>
 
 <Playground>
-  <Rotate animate={true} mode="in" direction="down" from="left">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Rotate>  
+  <h1>Say Hello to React
+    <Rotate animate={true} repeat="infinite">
+      AnimateCSS
+    </Rotate>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Rotate animate={true} as="em">
+      AnimateCSS
+    </Rotate>  
+  </h1>
 </Playground>
 
 ## Properties

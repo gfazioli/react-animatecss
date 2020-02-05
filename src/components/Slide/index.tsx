@@ -1,23 +1,23 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS, uc } from "../AnimateCSS"
+import { AnimateCSS, animateName, Direction, IAnimateCSS, Mode } from "../AnimateCSS";
 
-interface Props extends IAnimateCSS {
+export interface SlideProps extends IAnimateCSS {
   /**
    * Animate mode "in"|"out"
-   * 
+   *
    * @default "in"
    */
-  mode?: string;
+  mode?: Mode;
   /**
    * Animation direction "up"|"down"|"left"|"right"
-   * 
+   *
    * @default "down"
    */
-  direction?: string;
+  direction?: Direction;
 }
 
-const SlideStyled = styled(AnimateCSS) <Props>`
+const SlideStyled = styled(AnimateCSS)<SlideProps>`
   @keyframes slideInDown {
     from {
       transform: translate3d(0, -100%, 0);
@@ -33,7 +33,7 @@ const SlideStyled = styled(AnimateCSS) <Props>`
       transform: translate3d(-100%, 0, 0);
       visibility: visible;
     }
-  
+
     to {
       transform: translate3d(0, 0, 0);
     }
@@ -43,7 +43,7 @@ const SlideStyled = styled(AnimateCSS) <Props>`
       transform: translate3d(100%, 0, 0);
       visibility: visible;
     }
-  
+
     to {
       transform: translate3d(0, 0, 0);
     }
@@ -53,17 +53,17 @@ const SlideStyled = styled(AnimateCSS) <Props>`
       transform: translate3d(0, 100%, 0);
       visibility: visible;
     }
-  
+
     to {
       transform: translate3d(0, 0, 0);
     }
-  }  
+  }
 
   @keyframes slideOutDown {
     from {
       transform: translate3d(0, 0, 0);
     }
-  
+
     to {
       visibility: hidden;
       transform: translate3d(0, 100%, 0);
@@ -73,7 +73,7 @@ const SlideStyled = styled(AnimateCSS) <Props>`
     from {
       transform: translate3d(0, 0, 0);
     }
-  
+
     to {
       visibility: hidden;
       transform: translate3d(-100%, 0, 0);
@@ -83,7 +83,7 @@ const SlideStyled = styled(AnimateCSS) <Props>`
     from {
       transform: translate3d(0, 0, 0);
     }
-  
+
     to {
       visibility: hidden;
       transform: translate3d(100%, 0, 0);
@@ -93,26 +93,16 @@ const SlideStyled = styled(AnimateCSS) <Props>`
     from {
       transform: translate3d(0, 0, 0);
     }
-  
+
     to {
       visibility: hidden;
       transform: translate3d(0, -100%, 0);
     }
-  }  
+  }
 
-  animation-name: ${p => p.animate ? "slide" + uc(p.mode) + uc(p.direction) : "none"};
-
+  animation-name: ${p => animateName("slide", { ...p, mode: p.mode || "in", direction: p.direction || "down" })};
 `;
 
-const Slide: FunctionComponent<Props> = props => {
-
-  const { children, mode = "in", direction = "down", ...others } = props;
-
-  return (
-    <SlideStyled mode={mode} direction={direction} {...others}>
-      {children}
-    </SlideStyled>
-  );
-}
+const Slide = (props: SlideProps) => <SlideStyled {...props}>{props?.children}</SlideStyled>;
 
 export default Slide;

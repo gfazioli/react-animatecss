@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, animateName, IAnimateCSS } from "../AnimateCSS";
 
 const SwingStyled = styled(AnimateCSS)`
-
   @keyframes swing {
     20% {
       transform: rotate3d(0, 0, 1, 15deg);
@@ -26,19 +25,10 @@ const SwingStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => p.animate ? "swing" : "none"};
+  animation-name: ${p => animateName("swing", p)};
   transform-origin: top center;
 `;
 
-const Swing: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <SwingStyled {...others}>
-      {children}
-    </SwingStyled>
-  );
-}
+const Swing = (props: IAnimateCSS) => <SwingStyled {...props}>{props?.children}</SwingStyled>;
 
 export default Swing;

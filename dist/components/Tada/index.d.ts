@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const Tada: FunctionComponent<IAnimateCSS>;
+declare const Tada: (props: IAnimateCSS) => JSX.Element;
 export default Tada;

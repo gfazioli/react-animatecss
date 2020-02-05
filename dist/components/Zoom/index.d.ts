@@ -1,18 +1,18 @@
-import { FunctionComponent } from "react";
-import { IAnimateCSS } from "../AnimateCSS";
-interface Props extends IAnimateCSS {
+/// <reference types="react" />
+import { Direction, IAnimateCSS, Mode } from "../AnimateCSS";
+export interface ZoomProps extends IAnimateCSS {
     /**
      * Animate mode "in"|"out"
      *
      * @default "in"
      */
-    mode?: string;
+    mode?: Mode;
     /**
      * Animation direction "up"|"left"|"down"|"right"
      *
      * @default none
      */
-    direction?: string;
+    direction?: Direction;
 }
-declare const Zoom: FunctionComponent<Props>;
+declare const Zoom: (props: ZoomProps) => JSX.Element;
 export default Zoom;

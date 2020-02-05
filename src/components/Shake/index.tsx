@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, animateName, IAnimateCSS } from "../AnimateCSS";
 
 const ShakeStyled = styled(AnimateCSS)`
-
   @keyframes shake {
     from,
     to {
@@ -26,19 +25,9 @@ const ShakeStyled = styled(AnimateCSS)`
     }
   }
 
-
-  animation-name: ${p => p.animate ? "shake" : "none"};
+  animation-name: ${p => animateName("shake", p)};
 `;
 
-const Shake: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <ShakeStyled {...others}>
-      {children}
-    </ShakeStyled>
-  );
-}
+const Shake = (props: IAnimateCSS) => <ShakeStyled {...props}>{props?.children}</ShakeStyled>;
 
 export default Shake;

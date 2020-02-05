@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const Wobble: FunctionComponent<IAnimateCSS>;
+declare const Wobble: (props: IAnimateCSS) => JSX.Element;
 export default Wobble;

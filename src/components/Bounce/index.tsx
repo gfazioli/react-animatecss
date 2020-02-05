@@ -1,7 +1,22 @@
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSSModeDirection, animateName } from "../AnimateCSS";
+import { AnimateCSS, animateName, Direction, IAnimateCSS, Mode } from "../AnimateCSS";
 
-export default styled(AnimateCSSModeDirection)`
+export interface BounceProps extends IAnimateCSS {
+  /**
+   * Animate mode "" | "in"|"out"
+   *
+   */
+  mode?: Mode;
+  /**
+   * Animation direction ""| "up"|"left"|"down"|"right"
+   *
+   * @default none
+   */
+  direction?: Direction;
+}
+
+const BounceStyled = styled(AnimateCSS)<BounceProps>`
   @keyframes bounce {
     from,
     20%,
@@ -266,7 +281,12 @@ export default styled(AnimateCSSModeDirection)`
     }
   }
 
-  animation-name: ${p => animateName("bounce", { ...p, mode: p.mode || p.direction ? "in" : "" })};
+  animation-name: ${p => animateName("bounce", { ...p, mode: p.mode || p.direction ? p.mode || "in" : "" })};
+  animation-duration: ${p => p.duration || "0.75s"};
 
   ${p => (p.mode ? "transform-origin: center bottom;" : "")}
 `;
+
+const Bounce = (props: BounceProps) => <BounceStyled {...props}>{props?.children}</BounceStyled>;
+
+export default Bounce;

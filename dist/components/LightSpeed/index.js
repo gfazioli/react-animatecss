@@ -14,17 +14,6 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -32,11 +21,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var styled_components_1 = __importDefault(require("styled-components"));
 var AnimateCSS_1 = require("../AnimateCSS");
-var LightSpeedStyled = styled_components_1.default(AnimateCSS_1.AnimateCSS)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  \n  @keyframes lightSpeedIn {\n    from {\n      transform: translate3d(100%, 0, 0) skewX(-30deg);\n      opacity: 0;\n    }\n\n    60% {\n      transform: skewX(20deg);\n      opacity: 1;\n    }\n\n    80% {\n      transform: skewX(-5deg);\n    }\n\n    to {\n      transform: translate3d(0, 0, 0);\n    }\n  }\n\n  @keyframes lightSpeedOut {\n    from {\n      opacity: 1;\n    }\n\n    to {\n      transform: translate3d(100%, 0, 0) skewX(30deg);\n      opacity: 0;\n    }\n}\n\n  animation-name: ", ";\n  animation-timing-function: ", ";\n"], ["\n  \n  @keyframes lightSpeedIn {\n    from {\n      transform: translate3d(100%, 0, 0) skewX(-30deg);\n      opacity: 0;\n    }\n\n    60% {\n      transform: skewX(20deg);\n      opacity: 1;\n    }\n\n    80% {\n      transform: skewX(-5deg);\n    }\n\n    to {\n      transform: translate3d(0, 0, 0);\n    }\n  }\n\n  @keyframes lightSpeedOut {\n    from {\n      opacity: 1;\n    }\n\n    to {\n      transform: translate3d(100%, 0, 0) skewX(30deg);\n      opacity: 0;\n    }\n}\n\n  animation-name: ", ";\n  animation-timing-function: ", ";\n"])), function (p) { return p.animate ? "lightSpeed" + AnimateCSS_1.uc(p.mode) : "none"; }, function (p) { return "ease" + p.mode; });
-var LightSpeed = function (props) {
-    var children = props.children, _a = props.mode, mode = _a === void 0 ? "in" : _a, others = __rest(props, ["children", "mode"]);
-    return (react_1.default.createElement(LightSpeedStyled, __assign({ mode: mode }, others), children));
-};
+var LightSpeedStyled = styled_components_1.default(AnimateCSS_1.AnimateCSS)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  @keyframes lightSpeedIn {\n    from {\n      transform: translate3d(100%, 0, 0) skewX(-30deg);\n      opacity: 0;\n    }\n\n    60% {\n      transform: skewX(20deg);\n      opacity: 1;\n    }\n\n    80% {\n      transform: skewX(-5deg);\n    }\n\n    to {\n      transform: translate3d(0, 0, 0);\n    }\n  }\n\n  @keyframes lightSpeedOut {\n    from {\n      opacity: 1;\n    }\n\n    to {\n      transform: translate3d(100%, 0, 0) skewX(30deg);\n      opacity: 0;\n    }\n  }\n\n  animation-name: ", ";\n  animation-timing-function: ", ";\n"], ["\n  @keyframes lightSpeedIn {\n    from {\n      transform: translate3d(100%, 0, 0) skewX(-30deg);\n      opacity: 0;\n    }\n\n    60% {\n      transform: skewX(20deg);\n      opacity: 1;\n    }\n\n    80% {\n      transform: skewX(-5deg);\n    }\n\n    to {\n      transform: translate3d(0, 0, 0);\n    }\n  }\n\n  @keyframes lightSpeedOut {\n    from {\n      opacity: 1;\n    }\n\n    to {\n      transform: translate3d(100%, 0, 0) skewX(30deg);\n      opacity: 0;\n    }\n  }\n\n  animation-name: ", ";\n  animation-timing-function: ", ";\n"])), function (p) { return AnimateCSS_1.animateName("lightSpeed", __assign(__assign({}, p), { mode: p.mode || "in" })); }, function (p) { return "ease" + p.mode || "in"; });
+var LightSpeed = function (props) { var _a; return react_1.default.createElement(LightSpeedStyled, __assign({}, props), (_a = props) === null || _a === void 0 ? void 0 : _a.children); };
 exports.default = LightSpeed;
 var templateObject_1;
 //# sourceMappingURL=index.js.map

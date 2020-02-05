@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS, animateName } from "../AnimateCSS";
 
 const JackInTheBoxStyled = styled(AnimateCSS)`
-
   @keyframes jackInTheBox {
     from {
       opacity: 0;
@@ -25,19 +24,9 @@ const JackInTheBoxStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => p.animate ? "jackInTheBox" : "none"};
-
+  animation-name: ${p => animateName("jackInTheBox", p)};
 `;
 
-const JackInTheBox: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <JackInTheBoxStyled {...others}>
-      {children}
-    </JackInTheBoxStyled>
-  );
-}
+const JackInTheBox = (props: IAnimateCSS) => <JackInTheBoxStyled {...props}>{props?.children}</JackInTheBoxStyled>;
 
 export default JackInTheBox;

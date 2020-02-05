@@ -10,9 +10,73 @@ import JackInTheBox from '../../../src/components/JackInTheBox'
 ## Basic usage
 
 <Playground>
-  <JackInTheBox animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </JackInTheBox>  
+  <h1>Say Hello to React
+    <JackInTheBox animate={true}>
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <JackInTheBox animate={true} block>
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <JackInTheBox animate={true} delay="5s">
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <JackInTheBox animate={true} duration="5s">
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <JackInTheBox animate={true} repeat="3">
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <JackInTheBox animate={true} repeat="infinite">
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <JackInTheBox animate={true} as="em">
+      AnimateCSS
+    </JackInTheBox>  
+  </h1>
 </Playground>
 
 ## Properties

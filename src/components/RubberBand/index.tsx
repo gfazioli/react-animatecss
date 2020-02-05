@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, animateName, IAnimateCSS } from "../AnimateCSS";
 
 const RubberBandStyled = styled(AnimateCSS)`
-
   @keyframes rubberBand {
     from {
       transform: scale3d(1, 1, 1);
@@ -34,19 +33,9 @@ const RubberBandStyled = styled(AnimateCSS)`
     }
   }
 
-
-  animation-name: ${p => p.animate ? "rubberBand" : "none"};
+  animation-name: ${p => animateName("rubberBand", p)};
 `;
 
-const RubberBand: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <RubberBandStyled {...others}>
-      {children}
-    </RubberBandStyled>
-  );
-}
+const RubberBand = (props: IAnimateCSS) => <RubberBandStyled {...props}>{props?.children}</RubberBandStyled>;
 
 export default RubberBand;

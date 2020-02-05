@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS, animateName } from "../AnimateCSS";
 
 const JelloStyled = styled(AnimateCSS)`
   @keyframes jello {
@@ -39,19 +39,10 @@ const JelloStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => p.animate ? "jello" : "none"};
+  animation-name: ${p => animateName("jello", p)};
   transform-origin: center;
 `;
 
-const Jello: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <JelloStyled {...others}>
-      {children}
-    </JelloStyled>
-  );
-}
+const Jello = (props: IAnimateCSS) => <JelloStyled {...props}>{props?.children}</JelloStyled>;
 
 export default Jello;

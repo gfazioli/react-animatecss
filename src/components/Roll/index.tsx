@@ -1,17 +1,17 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS, uc } from "../AnimateCSS"
+import { AnimateCSS, animateName, IAnimateCSS, Mode } from "../AnimateCSS";
 
-interface Props extends IAnimateCSS {
+interface RollProps extends IAnimateCSS {
   /**
    * Animate mode "in"|"out"
-   * 
+   *
    * @default "in"
    */
-  mode?: string;
+  mode?: Mode;
 }
 
-const RollStyled = styled(AnimateCSS) <Props>`
+const RollStyled = styled(AnimateCSS)<RollProps>`
   @keyframes rollIn {
     from {
       opacity: 0;
@@ -27,26 +27,16 @@ const RollStyled = styled(AnimateCSS) <Props>`
     from {
       opacity: 1;
     }
-  
+
     to {
       opacity: 0;
       transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
     }
   }
 
-  animation-name: ${p => p.animate ? "roll" + uc(p.mode) : "none"};
-
+  animation-name: ${p => animateName("roll", { ...p, mode: p.mode || "in" })};
 `;
 
-const Roll: FunctionComponent<Props> = props => {
-
-  const { children, mode = "in", ...others } = props;
-
-  return (
-    <RollStyled mode={mode} {...others}>
-      {children}
-    </RollStyled>
-  );
-}
+const Roll = (props: RollProps) => <RollStyled {...props}>{props?.children}</RollStyled>;
 
 export default Roll;

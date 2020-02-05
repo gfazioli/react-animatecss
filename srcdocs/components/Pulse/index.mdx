@@ -10,9 +10,73 @@ import Pulse from '../../../src/components/Pulse'
 ## Basic usage
 
 <Playground>
-  <Pulse animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Pulse>  
+  <h1>Say Hello to React
+    <Pulse animate={true}>
+      AnimateCSS
+    </Pulse>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Pulse animate={true} block>
+      AnimateCSS
+    </Pulse>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Pulse animate={true} delay="5s">
+      AnimateCSS
+    </Pulse>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Pulse animate={true} duration="5s">
+      AnimateCSS
+    </Pulse>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Pulse animate={true} repeat="3">
+      AnimateCSS
+    </Pulse>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Pulse animate={true} repeat="infinite">
+      AnimateCSS
+    </Pulse>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Pulse animate={true} as="em">
+      AnimateCSS
+    </Pulse>  
+  </h1>
 </Playground>
 
 ## Properties

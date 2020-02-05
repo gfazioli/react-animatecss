@@ -10,15 +10,93 @@ import Flip from '../../../src/components/Flip'
 ## Basic usage
 
 <Playground>
-  <Flip animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Flip>  
+  <h1>Say Hello to React
+    <Flip animate={true}>
+      AnimateCSS
+    </Flip>  
+  </h1> 
+</Playground>
+
+## Axes
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} axes="x">
+      AnimateCSS
+    </Flip>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} block>
+      AnimateCSS
+    </Flip>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} delay="5s">
+      AnimateCSS
+    </Flip>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} duration="5s">
+      AnimateCSS
+    </Flip>  
+  </h1>
+</Playground>
+
+## Mode
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} mode="out">
+      AnimateCSS
+    </Flip>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} repeat="3">
+      AnimateCSS
+    </Flip>  
+  </h1>
 </Playground>
 
 <Playground>
-  <Flip animate={true} axes="x" mode="in">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Flip>  
+  <h1>Say Hello to React
+    <Flip animate={true} repeat="infinite">
+      AnimateCSS
+    </Flip>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Flip animate={true} as="em">
+      AnimateCSS
+    </Flip>  
+  </h1>
 </Playground>
 
 ## Properties

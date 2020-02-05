@@ -1,9 +1,12 @@
 ---
 name: Get Started
-route: /
+route: /get-started
 ---
 
 import {CodeSandbox} from "./theme/theme";
+import { Playground } from 'docz'
+import Bounce from '../src/components/Bounce'
+import Example, {BounceAnimation} from "./components/Bounce/example"
 
 # Get Started
 
@@ -48,13 +51,51 @@ You may use the `onAnimationEnd` event to detect when an animation is completed.
 
 ## Agnostic HTML tag
 
-Currently, the default container for all animations is a `span` with `display: inline-block`. You may easly override this behaviour by using the `as` property.
+Currently, the default container for all animations is a `span` with `display: inline-block`. You may easly override this behaviour by using the `as` property:
+
+<Playground>
+  <h1>Say Hello to React
+    <Bounce animate={true} as="div">
+      AnimateCSS
+    </Bounce>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Bounce animate={true} as="h6">
+      AnimateCSS
+    </Bounce>  
+  </h1>
+</Playground>
+
+## Display block
+
+Now, you can override the `display: inline-bock` in two ways. The first on is by using the new propery `block` 
+
+<Playground>
+  <h1>Say Hello to React
+    <Bounce animate={true} block>
+      AnimateCSS
+    </Bounce>  
+  </h1>
+</Playground>
+
+The above will display a `span` in  `display: bock`. You may also use the styled-component:
 
 ```
-<Bounce as="div" animate={true} direction="right" mode="in">
-  <h1>Say Hello to React AnimateCSS</h1>
-</Bounce>  
+const BounceAnimation = styled(Bounce).attrs({ as: "div" })`
+  display: block;
+`;
 ```
+
+See demo below
+
+<BounceAnimation />  
+
+## Complete example
+
+<Example />
 
 
 ## Credits

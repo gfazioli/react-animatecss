@@ -10,9 +10,73 @@ import HeartBeat from '../../../src/components/HeartBeat'
 ## Basic usage
 
 <Playground>
-  <HeartBeat animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </HeartBeat>  
+  <h1>Say Hello to React
+    <HeartBeat animate={true}>
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <HeartBeat animate={true} block>
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <HeartBeat animate={true} delay="5s">
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <HeartBeat animate={true} duration="5s">
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <HeartBeat animate={true} repeat="3">
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <HeartBeat animate={true} repeat="infinite">
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <HeartBeat animate={true} as="em">
+      AnimateCSS
+    </HeartBeat>  
+  </h1>
 </Playground>
 
 ## Properties

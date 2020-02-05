@@ -1,18 +1,18 @@
-import { FunctionComponent } from "react";
-import { IAnimateCSS } from "../AnimateCSS";
-interface Props extends IAnimateCSS {
+/// <reference types="react" />
+import { Direction, IAnimateCSS, Mode } from "../AnimateCSS";
+export interface SlideProps extends IAnimateCSS {
     /**
      * Animate mode "in"|"out"
      *
      * @default "in"
      */
-    mode?: string;
+    mode?: Mode;
     /**
      * Animation direction "up"|"down"|"left"|"right"
      *
      * @default "down"
      */
-    direction?: string;
+    direction?: Direction;
 }
-declare const Slide: FunctionComponent<Props>;
+declare const Slide: (props: SlideProps) => JSX.Element;
 export default Slide;

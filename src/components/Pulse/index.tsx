@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS, animateName } from "../AnimateCSS";
 
 const PulseStyled = styled(AnimateCSS)`
   @keyframes pulse {
@@ -17,18 +17,9 @@ const PulseStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => p.animate ? "pulse" : "none"};
+  animation-name: ${p => animateName("pulse", p)};
 `;
 
-const Pulse: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <PulseStyled {...others}>
-      {children}
-    </PulseStyled>
-  );
-}
+const Pulse = (props: IAnimateCSS) => <PulseStyled {...props}>{props?.children}</PulseStyled>;
 
 export default Pulse;

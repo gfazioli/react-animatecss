@@ -20,37 +20,42 @@ export interface IAnimateCSS {
   /**
    * Repeat the animation to infinite loop
    *
-   * @default false
+   * @deprecated Use repeat instead
    */
   infinite?: boolean;
+  /**
+   * Repeat animation for count times or "infinite"
+   */
+  repeat?: number | "none" | "infinite";
   /**
    * Animation delay
    *
    * @default none
    */
   delay?: string;
+
+  /**
+   * Force the HTML div as display: block;
+   */
+  block?: boolean;
+
+  /**
+   * @inheritdoc
+   */
+  children?: any;
+
+  /**
+   * @inheritdoc
+   */
+  as?: any;
 }
 
-export interface IAnimateCSSModeDirection extends IAnimateCSS {
-  /**
-   * Animate mode "" | "in"|"out"
-   *
-   * @default "in"
-   */
-  mode?: Mode;
-  /**
-   * Animation direction ""| "up"|"left"|"down"|"right"
-   *
-   * @default none
-   */
-  direction?: Direction;
-}
-
-const GlobalAnimateCSS = css<IAnimateCSS>`
-  display: inline-block;
+export const AnimateCSS = styled.span<IAnimateCSS>`
+  position: relative;
+  display: ${p => (p.block ? "block" : "inline-block")};
   animation-duration: ${p => p.duration || "1s"};
   animation-fill-mode: both;
-  animation-iteration-count: ${p => (p.infinite ? "infinite" : "none")};
+  animation-iteration-count: ${p => p.repeat || (p.infinite ? "infinite" : "none")};
   animation-delay: ${p => p.delay || "none"};
 
   @media (print), (prefers-reduced-motion) {
@@ -59,18 +64,12 @@ const GlobalAnimateCSS = css<IAnimateCSS>`
   }
 `;
 
-export const AnimateCSS = styled.span<IAnimateCSS>`
-  ${GlobalAnimateCSS}
-`;
-
-export const AnimateCSSModeDirection = styled.span<IAnimateCSSModeDirection>`
-  ${GlobalAnimateCSS}
-`;
-
 export const uc = (v?: string): string => (!!v && typeof v === "string" ? v.charAt(0).toUpperCase() + v.slice(1) : "");
 
 export const uppercase = (value = ""): string =>
   value.length > 0 ? value.charAt(0).toUpperCase() + value.slice(1) : "";
 
 export const animateName = (type: string, p: any): string =>
-  p.animate ? type + uppercase(p.mode || "") + uppercase(p.direction || "") + uppercase(p.axes || "") : "none";
+  p.animate
+    ? type + uppercase(p.mode || "") + uppercase(p.direction || "") + uppercase(p.axes || "") + uppercase(p.from || "")
+    : "none";

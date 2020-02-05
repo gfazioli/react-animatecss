@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, animateName } from "../AnimateCSS";
+import { AnimateCSS, IAnimateCSS, animateName } from "../AnimateCSS";
 
-export default styled(AnimateCSS)`
+const FlashStyled = styled(AnimateCSS)`
   @keyframes flash {
     from,
     50%,
@@ -17,3 +18,7 @@ export default styled(AnimateCSS)`
 
   animation-name: ${p => animateName("flash", p)};
 `;
+
+const Flash = (props: IAnimateCSS) => <FlashStyled {...props}>{props?.children}</FlashStyled>;
+
+export default Flash;

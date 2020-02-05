@@ -1,18 +1,17 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS, uc } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS, animateName, Mode } from "../AnimateCSS";
 
-interface Props extends IAnimateCSS {
+export interface LightSpeedProps extends IAnimateCSS {
   /**
    * Animate mode "in"|"out"
-   * 
+   *
    * @default "in"
    */
-  mode?: string;
+  mode?: Mode;
 }
 
-const LightSpeedStyled = styled(AnimateCSS) <Props>`
-  
+const LightSpeedStyled = styled(AnimateCSS)<LightSpeedProps>`
   @keyframes lightSpeedIn {
     from {
       transform: translate3d(100%, 0, 0) skewX(-30deg);
@@ -42,21 +41,12 @@ const LightSpeedStyled = styled(AnimateCSS) <Props>`
       transform: translate3d(100%, 0, 0) skewX(30deg);
       opacity: 0;
     }
-}
+  }
 
-  animation-name: ${p => p.animate ? "lightSpeed" + uc(p.mode) : "none"};
-  animation-timing-function: ${p => "ease" + p.mode};
+  animation-name: ${p => animateName("lightSpeed", { ...p, mode: p.mode || "in" })};
+  animation-timing-function: ${p => "ease" + p.mode || "in"};
 `;
 
-const LightSpeed: FunctionComponent<Props> = props => {
-
-  const { children, mode = "in", ...others } = props;
-
-  return (
-    <LightSpeedStyled mode={mode} {...others}>
-      {children}
-    </LightSpeedStyled>
-  );
-}
+const LightSpeed = (props: LightSpeedProps) => <LightSpeedStyled {...props}>{props?.children}</LightSpeedStyled>;
 
 export default LightSpeed;

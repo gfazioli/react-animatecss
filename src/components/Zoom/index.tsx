@@ -1,23 +1,23 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS, uc } from "../AnimateCSS"
+import { AnimateCSS, animateName, Direction, IAnimateCSS, Mode } from "../AnimateCSS";
 
-interface Props extends IAnimateCSS {
+export interface ZoomProps extends IAnimateCSS {
   /**
    * Animate mode "in"|"out"
-   * 
+   *
    * @default "in"
    */
-  mode?: string;
+  mode?: Mode;
   /**
    * Animation direction "up"|"left"|"down"|"right"
-   * 
+   *
    * @default none
    */
-  direction?: string;
+  direction?: Direction;
 }
 
-const ZoomStyled = styled(AnimateCSS) <Props>`
+const ZoomStyled = styled(AnimateCSS)<ZoomProps>`
   @keyframes zoomIn {
     from {
       opacity: 0;
@@ -49,7 +49,7 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
       transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
-  
+
     60% {
       opacity: 1;
       transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
@@ -63,7 +63,7 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
       transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
-  
+
     60% {
       opacity: 1;
       transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
@@ -106,7 +106,7 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
       transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
-  
+
     to {
       opacity: 0;
       transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
@@ -120,7 +120,7 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
       opacity: 1;
       transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
     }
-  
+
     to {
       opacity: 0;
       transform: scale(0.1) translate3d(-2000px, 0, 0);
@@ -133,7 +133,7 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
       opacity: 1;
       transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
     }
-  
+
     to {
       opacity: 0;
       transform: scale(0.1) translate3d(2000px, 0, 0);
@@ -147,7 +147,7 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
       transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
-  
+
     to {
       opacity: 0;
       transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
@@ -156,18 +156,9 @@ const ZoomStyled = styled(AnimateCSS) <Props>`
     }
   }
 
-  animation-name: ${p => p.animate ? "zoom" + uc(p.mode) + uc(p.direction) : "none"};
+  animation-name: ${p => animateName("zoom", { ...p, mode: p.mode || "in" })};
 `;
 
-const Zoom: FunctionComponent<Props> = props => {
-
-  const { children, mode = "in", ...others } = props;
-
-  return (
-    <ZoomStyled mode={mode} {...others}>
-      {children}
-    </ZoomStyled>
-  );
-}
+const Zoom = (props: ZoomProps) => <ZoomStyled {...props}>{props?.children}</ZoomStyled>;
 
 export default Zoom;

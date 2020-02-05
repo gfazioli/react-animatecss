@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const Swing: FunctionComponent<IAnimateCSS>;
+declare const Swing: (props: IAnimateCSS) => JSX.Element;
 export default Swing;

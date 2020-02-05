@@ -1,24 +1,24 @@
-import { FunctionComponent } from "react";
-import { IAnimateCSS } from "../AnimateCSS";
-interface Props extends IAnimateCSS {
+/// <reference types="react" />
+import { IAnimateCSS, Mode } from "../AnimateCSS";
+interface RotateProps extends IAnimateCSS {
     /**
      * Animate mode "in"|"out"
      *
      * @default "in"
      */
-    mode?: string;
+    mode?: Mode;
     /**
-     * Animation direction "up"|"down"
+     * Animation direction "up"|"down". You should use `direction` alogn with `from`. Default value for `from` is `left`
      *
      * @default none
      */
-    direction?: string;
+    direction?: "" | "up" | "down";
     /**
-     * Rotate from "left"|"right"
+     * Rotate from "left"|"right". You should use `from` alogn with `direction`. Default value for `direction` is `up`
      *
      * @default none
      */
-    from?: string;
+    from?: "" | "left" | "right";
 }
-declare const Rotate: FunctionComponent<Props>;
+declare const Rotate: (props: RotateProps) => JSX.Element;
 export default Rotate;

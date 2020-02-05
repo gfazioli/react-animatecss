@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const Pulse: FunctionComponent<IAnimateCSS>;
+declare const Pulse: (props: IAnimateCSS) => JSX.Element;
 export default Pulse;

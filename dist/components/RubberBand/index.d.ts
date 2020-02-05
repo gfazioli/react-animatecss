@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const RubberBand: FunctionComponent<IAnimateCSS>;
+declare const RubberBand: (props: IAnimateCSS) => JSX.Element;
 export default RubberBand;

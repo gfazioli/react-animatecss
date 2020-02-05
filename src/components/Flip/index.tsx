@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 import { AnimateCSS, animateName, Axes, IAnimateCSS, Mode } from "../AnimateCSS";
 
-interface Props extends IAnimateCSS {
+export interface FlipProps extends IAnimateCSS {
   /**
    * Animate mode "in"|"out"
    *
@@ -9,14 +10,14 @@ interface Props extends IAnimateCSS {
    */
   mode?: Mode;
   /**
-   * Animation direction "x"|"y"
+   * Animation direction "x"|"y". You have set the mode as well.
    *
    * @default none
    */
   axes?: Axes;
 }
 
-export default styled(AnimateCSS)<Props>`
+const FlipStyled = styled(AnimateCSS)<FlipProps>`
   @keyframes flip {
     from {
       transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
@@ -126,6 +127,11 @@ export default styled(AnimateCSS)<Props>`
     }
   }
 
-  animation-name: ${p => animateName("flip", p)};
+  animation-name: ${p =>
+    animateName("flip", { ...p, mode: p.mode || (p.axes ? "in" : ""), axes: p.axes || (p.mode ? "x" : "") })};
   backface-visibility: visible !important;
 `;
+
+const Flip = (props: FlipProps) => <FlipStyled {...props}>{props?.children}</FlipStyled>;
+
+export default Flip;

@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const JackInTheBox: FunctionComponent<IAnimateCSS>;
+declare const JackInTheBox: (props: IAnimateCSS) => JSX.Element;
 export default JackInTheBox;

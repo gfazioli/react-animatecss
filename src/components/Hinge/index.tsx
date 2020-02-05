@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, IAnimateCSS, animateName } from "../AnimateCSS";
 
 const HingeStyled = styled(AnimateCSS)`
-
   @keyframes hinge {
     0% {
       transform-origin: top left;
@@ -31,20 +30,10 @@ const HingeStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => p.animate ? "hinge" : "none"};
+  animation-name: ${p => animateName("hinge", p)};
   animation-duration: ${p => p.duration || "2s"};
-
 `;
 
-const Hinge: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <HingeStyled {...others}>
-      {children}
-    </HingeStyled>
-  );
-}
+const Hinge = (props: IAnimateCSS) => <HingeStyled {...props}>{props?.children}</HingeStyled>;
 
 export default Hinge;

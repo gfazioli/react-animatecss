@@ -10,21 +10,106 @@ import Fade from '../../../src/components/Fade'
 ## Basic usage
 
 <Playground>
-  <Fade animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Fade>  
+  <h1>Say Hello to React
+    <Fade animate={true}>
+      AnimateCSS
+    </Fade>  
+  </h1>
+</Playground>
+
+## Big
+
+Ueful when also the `direction` is set
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} big>
+      AnimateCSS
+    </Fade>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} block>
+      AnimateCSS
+    </Fade>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} delay="5s">
+      AnimateCSS
+    </Fade>  
+  </h1>
+</Playground>
+
+## Direction
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} direction="right">
+      AnimateCSS
+    </Fade>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} duration="5s">
+      AnimateCSS
+    </Fade>  
+  </h1>
+</Playground>
+
+## Mode
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} mode="out">
+      AnimateCSS
+    </Fade>  
+  </h1> 
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Fade animate={true} repeat="3">
+      AnimateCSS
+    </Fade>  
+  </h1>
 </Playground>
 
 <Playground>
-  <Fade animate={true} direction="down" mode="in">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Fade>  
+  <h1>Say Hello to React
+    <Fade animate={true} repeat="infinite">
+      AnimateCSS
+    </Fade>  
+  </h1>
 </Playground>
 
+
+## Agnostic tag
+
 <Playground>
-  <Fade animate={true} direction="down" mode="in" big>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Fade>  
+  <h1>Say Hello to React
+    <Fade animate={true} as="em">
+      AnimateCSS
+    </Fade>  
+  </h1> 
 </Playground>
 
 ## Properties

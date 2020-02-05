@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 import { AnimateCSS, animateName, Direction, IAnimateCSS, Mode } from "../AnimateCSS";
 
-interface Props extends IAnimateCSS {
+export interface FadeProps extends IAnimateCSS {
   /**
    * Animate mode "in"|"out"
    *
@@ -22,7 +23,7 @@ interface Props extends IAnimateCSS {
   big?: boolean;
 }
 
-export default styled(AnimateCSS)<Props>`
+const FadeStyled = styled(AnimateCSS)<FadeProps>`
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -129,3 +130,7 @@ export default styled(AnimateCSS)<Props>`
 
   animation-name: ${p => animateName("fade", { ...p, mode: p.mode || "in" })};
 `;
+
+const Fade = (props: FadeProps) => <FadeStyled {...props}>{props?.children}</FadeStyled>;
+
+export default Fade;

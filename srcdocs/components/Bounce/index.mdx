@@ -11,53 +11,93 @@ import Example from "./example"
 ## Basic usage
 
 <Playground>
-  <Bounce animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Bounce>  
+  <h1>Say Hello to React
+    <Bounce animate={true}>
+      AnimateCSS
+    </Bounce>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Bounce animate={true} block>
+      AnimateCSS
+    </Bounce>  
+  </h1>
 </Playground>
 
 ## Delay
 
 <Playground>
-  <Bounce animate={true} delay="5s">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Bounce>  
+  <h1>Say Hello to React
+    <Bounce animate={true} delay="5s">
+      AnimateCSS
+    </Bounce>  
+  </h1>
 </Playground>
 
 ## Direction
 
 <Playground>
-  <Bounce animate={true} direction="right">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Bounce>  
+  <h1>Say Hello to React
+    <Bounce animate={true} direction="right">
+      AnimateCSS
+    </Bounce>  
+  </h1>
 </Playground>
-
 
 ## Duration
 
 <Playground>
-  <Bounce animate={true} duration="5s">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Bounce>  
+  <h1>Say Hello to React
+    <Bounce animate={true} duration="5s">
+      AnimateCSS
+    </Bounce>  
+  </h1>
 </Playground>
 
 ## Mode
 
 <Playground>
-  <Bounce animate={true} mode="out">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Bounce>  
+  <h1>Say Hello to React
+    <Bounce animate={true} mode="out">
+      AnimateCSS
+    </Bounce>  
+  </h1>
 </Playground>
 
+## Repeat
 
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
 
+<Playground>
+  <h1>Say Hello to React
+    <Bounce animate={true} repeat="3">
+      AnimateCSS
+    </Bounce>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Bounce animate={true} repeat="infinite">
+      AnimateCSS
+    </Bounce>  
+  </h1>
+</Playground>
 
 ## Agnostic tag
 
 <Playground>
-  <Bounce as="div" animate={true} direction="right" mode="in">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Bounce>  
+  <h1>Say Hello to React
+    <Bounce animate={true} as="em">
+      AnimateCSS
+    </Bounce>  
+  </h1>
 </Playground>
 
 ## Example 

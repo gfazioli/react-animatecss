@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const HeartBeat: FunctionComponent<IAnimateCSS>;
+declare const HeartBeat: (props: IAnimateCSS) => JSX.Element;
 export default HeartBeat;

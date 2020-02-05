@@ -1,5 +1,6 @@
+/// <reference types="react" />
 import { Direction, IAnimateCSS, Mode } from "../AnimateCSS";
-interface Props extends IAnimateCSS {
+export interface FadeProps extends IAnimateCSS {
     /**
      * Animate mode "in"|"out"
      *
@@ -19,5 +20,5 @@ interface Props extends IAnimateCSS {
      */
     big?: boolean;
 }
-declare const _default: import("styled-components").StyledComponent<"span", any, IAnimateCSS & Props, never>;
-export default _default;
+declare const Fade: (props: FadeProps) => JSX.Element;
+export default Fade;

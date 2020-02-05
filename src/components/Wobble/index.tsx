@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styled from "styled-components";
-import { AnimateCSS, IAnimateCSS } from "../AnimateCSS"
+import { AnimateCSS, animateName, IAnimateCSS } from "../AnimateCSS";
 
 const WobbleStyled = styled(AnimateCSS)`
   @keyframes wobble {
@@ -33,18 +33,9 @@ const WobbleStyled = styled(AnimateCSS)`
     }
   }
 
-  animation-name: ${p => p.animate ? "wobble" : "none"};
+  animation-name: ${p => animateName("wobble", p)};
 `;
 
-const Wobble: FunctionComponent<IAnimateCSS> = props => {
-
-  const { children, ...others } = props;
-
-  return (
-    <WobbleStyled {...others}>
-      {children}
-    </WobbleStyled>
-  );
-}
+const Wobble = (props: IAnimateCSS) => <WobbleStyled {...props}>{props?.children}</WobbleStyled>;
 
 export default Wobble;

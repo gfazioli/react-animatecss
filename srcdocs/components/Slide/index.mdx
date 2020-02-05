@@ -10,15 +10,93 @@ import Slide from '../../../src/components/Slide'
 ## Basic usage
 
 <Playground>
-  <Slide animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Slide>  
+  <h1>Say Hello to React
+    <Slide animate={true}>
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} block>
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} delay="5s">
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Direction
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} direction="right">
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} duration="5s">
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Mode
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} mode="out">
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} repeat="3">
+      AnimateCSS
+    </Slide>  
+  </h1>
 </Playground>
 
 <Playground>
-  <Slide animate={true} mode="out" direction="right">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Slide>  
+  <h1>Say Hello to React
+    <Slide animate={true} repeat="infinite">
+      AnimateCSS
+    </Slide>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Slide animate={true} as="em">
+      AnimateCSS
+    </Slide>  
+  </h1>
 </Playground>
 
 ## Properties

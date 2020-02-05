@@ -10,9 +10,73 @@ import HeadShake from '../../../src/components/HeadShake'
 ## Basic usage
 
 <Playground>
-  <HeadShake animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </HeadShake>  
+  <h1>Say Hello to React
+    <HeadShake animate={true}>
+      AnimateCSS
+    </HeadShake>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <HeadShake animate={true} block>
+      AnimateCSS
+    </HeadShake>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <HeadShake animate={true} delay="5s">
+      AnimateCSS
+    </HeadShake>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <HeadShake animate={true} duration="5s">
+      AnimateCSS
+    </HeadShake>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <HeadShake animate={true} repeat="3">
+      AnimateCSS
+    </HeadShake>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <HeadShake animate={true} repeat="infinite">
+      AnimateCSS
+    </HeadShake>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <HeadShake animate={true} as="em">
+      AnimateCSS
+    </HeadShake>  
+  </h1>
 </Playground>
 
 ## Properties

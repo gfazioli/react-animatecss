@@ -10,15 +10,83 @@ import LightSpeed from '../../../src/components/LightSpeed'
 ## Basic usage
 
 <Playground>
-  <LightSpeed animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </LightSpeed>  
+  <h1>Say Hello to React
+    <LightSpeed animate={true}>
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <LightSpeed animate={true} block>
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <LightSpeed animate={true} delay="5s">
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <LightSpeed animate={true} duration="5s">
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
+</Playground>
+
+## Mode
+
+<Playground>
+  <h1>Say Hello to React
+    <LightSpeed animate={true} mode="out">
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <LightSpeed animate={true} repeat="3">
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
 </Playground>
 
 <Playground>
-  <LightSpeed animate={true} mode="out">
-    <h1>Say Hello to React AnimateCSS</h1>
-  </LightSpeed>  
+  <h1>Say Hello to React
+    <LightSpeed animate={true} repeat="infinite">
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <LightSpeed animate={true} as="em">
+      AnimateCSS
+    </LightSpeed>  
+  </h1>
 </Playground>
 
 ## Properties

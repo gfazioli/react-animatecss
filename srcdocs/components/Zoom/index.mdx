@@ -10,9 +10,93 @@ import Zoom from '../../../src/components/Zoom'
 ## Basic usage
 
 <Playground>
-  <Zoom animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Zoom>  
+  <h1>Say Hello to React
+    <Zoom animate={true}>
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} block>
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} delay="5s">
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Direction
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} direction="right">
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} duration="5s">
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Mode
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} mode="out">
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} repeat="3">
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} repeat="infinite">
+      AnimateCSS
+    </Zoom>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Zoom animate={true} as="em">
+      AnimateCSS
+    </Zoom>  
+  </h1>
 </Playground>
 
 ## Properties

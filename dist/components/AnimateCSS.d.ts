@@ -17,32 +17,33 @@ export interface IAnimateCSS {
     /**
      * Repeat the animation to infinite loop
      *
-     * @default false
+     * @deprecated Use repeat instead
      */
     infinite?: boolean;
+    /**
+     * Repeat animation for count times or "infinite"
+     */
+    repeat?: number | "none" | "infinite";
     /**
      * Animation delay
      *
      * @default none
      */
     delay?: string;
-}
-export interface IAnimateCSSModeDirection extends IAnimateCSS {
     /**
-     * Animate mode "" | "in"|"out"
-     *
-     * @default "in"
+     * Force the HTML div as display: block;
      */
-    mode?: Mode;
+    block?: boolean;
     /**
-     * Animation direction ""| "up"|"left"|"down"|"right"
-     *
-     * @default none
+     * @inheritdoc
      */
-    direction?: Direction;
+    children?: any;
+    /**
+     * @inheritdoc
+     */
+    as?: any;
 }
 export declare const AnimateCSS: import("styled-components").StyledComponent<"span", any, IAnimateCSS, never>;
-export declare const AnimateCSSModeDirection: import("styled-components").StyledComponent<"span", any, IAnimateCSSModeDirection, never>;
 export declare const uc: (v?: string | undefined) => string;
 export declare const uppercase: (value?: string) => string;
 export declare const animateName: (type: string, p: any) => string;

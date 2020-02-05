@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+/// <reference types="react" />
 import { IAnimateCSS } from "../AnimateCSS";
-declare const Hinge: FunctionComponent<IAnimateCSS>;
+declare const Hinge: (props: IAnimateCSS) => JSX.Element;
 export default Hinge;

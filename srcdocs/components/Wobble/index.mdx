@@ -10,9 +10,73 @@ import Wobble from '../../../src/components/Wobble'
 ## Basic usage
 
 <Playground>
-  <Wobble animate={true}>
-    <h1>Say Hello to React AnimateCSS</h1>
-  </Wobble>  
+  <h1>Say Hello to React
+    <Wobble animate={true}>
+      AnimateCSS
+    </Wobble>  
+  </h1>
+</Playground>
+
+## Block
+
+You may force the HTML element to be displayed in `block` instead of `inline-block`
+
+<Playground>
+  <h1>Say Hello to React
+    <Wobble animate={true} block>
+      AnimateCSS
+    </Wobble>  
+  </h1>
+</Playground>
+
+## Delay
+
+<Playground>
+  <h1>Say Hello to React
+    <Wobble animate={true} delay="5s">
+      AnimateCSS
+    </Wobble>  
+  </h1>
+</Playground>
+
+## Duration
+
+<Playground>
+  <h1>Say Hello to React
+    <Wobble animate={true} duration="5s">
+      AnimateCSS
+    </Wobble>  
+  </h1>
+</Playground>
+
+## Repeat
+
+You may use `repeat` to repeat the animation _n_ times. Use `infinite` for infinite loop.
+
+<Playground>
+  <h1>Say Hello to React
+    <Wobble animate={true} repeat="3">
+      AnimateCSS
+    </Wobble>  
+  </h1>
+</Playground>
+
+<Playground>
+  <h1>Say Hello to React
+    <Wobble animate={true} repeat="infinite">
+      AnimateCSS
+    </Wobble>  
+  </h1>
+</Playground>
+
+## Agnostic tag
+
+<Playground>
+  <h1>Say Hello to React
+    <Wobble animate={true} as="em">
+      AnimateCSS
+    </Wobble>  
+  </h1>
 </Playground>
 
 ## Properties
