@@ -7,6 +7,11 @@
 ![last-commit](https://img.shields.io/github/last-commit/gfazioli/react-animatecss.svg)
 ![npm](https://img.shields.io/npm/dm/@gfazioli/react-animatecss.svg)
 
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/gfazioli/gfazioli/master/glancecard/react-animatecss.svg" width="880" alt="react-animatecss at a glance, refreshed daily: commits, releases, stars, issues and pull requests, a year of commit activity, the weekly rhythm, languages, latest commits and releases, contributors" /><br>
+  <sub>Made with <a href="https://github.com/gfazioli/glancecard">glancecard</a> · refreshed daily</sub></p>
+</div>
+
 Porting of [Animate CSS](https://github.com/daneden/animate.css) as React components
 
 ## Installation
